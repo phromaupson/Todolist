@@ -1,0 +1,16 @@
+<h1>Hello</h1>
+
+<ul>
+    <li *ngfor="let t of todos">{{t.title}}</li>
+</ul>
+
+<input
+    #nameInput
+    type="text"
+    [value]="name"
+    (change)="nameInput.value"
+/>
+
+<button onclick="addTodo()">Save</button>
+
+<router-outlet></router-outlet>

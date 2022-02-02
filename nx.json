@@ -1,0 +1,49 @@
+{
+  "npmScope": "test",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/express"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "Nzk2YzgwMWUtZTY4Ny00NWUwLTlhZjMtOWQ4NGY1ZjMxMzE1fHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "defaultProject": "backend",
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "css"
+    }
+  }
+}
